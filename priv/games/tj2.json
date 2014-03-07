@@ -1,0 +1,12 @@
+  {
+    "name"   : "Test Jeu 2",
+    "id"     : "tj2",
+    "author" : "lud",
+    "url"    : "http://somewhere.fr",
+    "status" : "live",
+    "techs"  : ["PHP","HTML5","JS","CSS3"],
+    "tags"   : ["medfan","sanglant","vampires aussi"],
+    "source" : "open",
+    "engine" : null,
+    "humans" : ["Hubert Roqueçort <hub@kiroxx.org>"]
+  }

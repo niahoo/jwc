@@ -1,0 +1,12 @@
+  {
+    "name"   : "Test Jeu 3",
+    "id"     : "tj3",
+    "author" : "niahoo",
+    "url"    : "http://ailleurs.fr",
+    "status" : "dev",
+    "techs"  : ["PHP","HTML5","JS","CSS3"],
+    "tags"   : ["medfan","sanglant","toujours des vampires"],
+    "source" : "open",
+    "engine" : null,
+    "humans" : ["@janépa"]
+  }

@@ -1,0 +1,9 @@
+{application,jwc,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{jwc_app,[]}},
+              {env,[]},
+              {modules,[jwc,jwc_app,jwc_dat,jwc_ring,jwc_sup,jwring,
+                        jwring_app,jwring_sup]}]}.

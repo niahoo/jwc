@@ -1,0 +1,14 @@
+// C/C++ style comments allowed
+
+  {
+    "name"   : "Age of Vampires",
+    "id"     : "aov",
+    "author" : "JC",
+    "url"    : "http://beta.age-of-vampires.fr",
+    "status" : "beta",
+    "techs"  : ["PHP","HTML5","JS","CSS3"],
+    "tags"   : ["medfan","sanglant","vampires"],
+    "source" : "open",
+    "engine" : null,
+    "humans" : ["Jean-Claude Überzinsky <jcu@trololo.com>"]
+  }
