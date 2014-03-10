@@ -29,7 +29,7 @@ L'identifiant ne doit pas déjà être pris par un autre jeu.
     "tags"   : ["medfan","sanglant","vampires"],
     "source" : "open",
     "engine" : null,
-    "humans" : ["Jean-Claude Überzinsky <jcu@trololo.com>"]
+    "humans" : ["Jean-Claude Überzinsky <jcu@trololo.com>"],
     "banners": { "728x90" : "http://serv.com/aov.jpg"
                , "120x240" : "http://serv.com/aov2.jpg"
                }
