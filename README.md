@@ -16,6 +16,8 @@ L'identifiant ne doit pas déjà être pris par un autre jeu.
 
 `humans` doit contenir une liste de contacts à qui l'on peut s'adresser pour avoir plus d'informations sur un jeu. Le format conseillé est `Nom Prénom <adresse@email.net>` mail il est également possible de spécifier un compte Twitter ou une URL Facebook par exemple.
 
+`banners` est un objet qui associe des formats d'image à des URLs.
+
 ```json
   {
     "name"   : "Age of Vampires",
@@ -28,5 +30,8 @@ L'identifiant ne doit pas déjà être pris par un autre jeu.
     "source" : "open",
     "engine" : null,
     "humans" : ["Jean-Claude Überzinsky <jcu@trololo.com>"]
+    "banners": { "728x90" : "http://serv.com/aov.jpg"
+               , "120x240" : "http://serv.com/aov2.jpg"
+               }
   }
 ```
