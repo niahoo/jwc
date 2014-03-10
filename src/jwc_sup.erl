@@ -24,8 +24,8 @@ start_link() ->
 
 init([]) ->
 		Childs = [
-			?CHILD(jwc_dat,worker),
+			?CHILD(jwc_ring_dat,worker),
 			?CHILD(jwc_ring,worker)
 		],
-    {ok, { {one_for_one, 5, 10}, Childs} }.
+    {ok, { {rest_for_one, 5, 10}, Childs} }.
 

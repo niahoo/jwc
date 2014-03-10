@@ -1,4 +1,4 @@
--module(jwc_dat).
+-module(jwc_ring_dat).
 -behaviour(gen_server).
 
 %% @todo don't loose the table
@@ -21,10 +21,9 @@ start_link() ->
 
 init([]) ->
 	GamesDir = filename:join(code:priv_dir(jwc),"games"),
-	?dbg("Reading games dir ~p",[GamesDir]),
 	{ok,Files} = file:list_dir(GamesDir),
 	GamesData = [load_file(filename:join(GamesDir,F)) || F <- Files],
-	?dbg("Ring initialized with Data :\n~p",[GamesData]),
+	?dbg("Ring data initialized :\n~p",[GamesData]),
 	T = ets:new(?MODULE,[named_table]),
 	true = ets:insert_new(T,GamesData),
 	{ok,T}.
@@ -51,7 +50,6 @@ load_file(Filename) ->
 	{ok,Bin} = file:read_file(Filename),
 	Data = jsx:decode(Bin),
 	ID = list_to_atom(binary_to_list(lkup(<<"id">>,Data))),
-	?dbg("Decoded JSON for game ID=~p :\n ~p",[ID,Data]),
 	{ID,Data}.
 
 lkup(K,L) ->

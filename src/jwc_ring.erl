@@ -4,7 +4,6 @@
 
 -define(dbg(F, A),	io:format("[debug] " ++ F ++ "\n", A)).
 
-
 -export([start_link/0]).
 -export([next/0]).
 
@@ -13,18 +12,24 @@
 					,code_change/3]).
 
 start_link() ->
-	gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
+	GetAllKeys = ets:fun2ms(fun({K,_}) -> K end),
+	AllKeys = ets:select(jwc_ring_dat,GetAllKeys),
+	?dbg("Gmes keys : ~p",[AllKeys]),
+	case AllKeys
+		of [] ->
+				{error,no_data}
+		 ; _ ->
+				gen_server:start_link({local,?MODULE},?MODULE,[AllKeys],[])
+	end.
 
 next() ->
-	gen_server:call(?MODULE,next).
+	Key = gen_server:call(?MODULE,next),
+	[{Key,Dat}] = ets:lookup(jwc_ring_dat,Key),
+	Dat.
 
 %% -- Callbacks -----------------------------------------------------
 
-init([]) ->
-	GetAllKeys = ets:fun2ms(fun({K,_}) -> K end),
-	?dbg("Get all keys matchspec: ~p",[GetAllKeys]),
-	AllKeys = ets:select(jwc_dat,GetAllKeys),
-	?dbg("AllKeys = ~p",[AllKeys]),
+init([AllKeys]) when is_list(AllKeys) ->
 	{ok,{AllKeys,[]}}.
 
 handle_call(next, _From, {[],Q}) ->

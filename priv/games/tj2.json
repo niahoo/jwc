@@ -1,12 +1,15 @@
-  {
-    "name"   : "Test Jeu 2",
-    "id"     : "tj2",
-    "author" : "lud",
-    "url"    : "http://somewhere.fr",
-    "status" : "live",
-    "techs"  : ["PHP","HTML5","JS","CSS3"],
-    "tags"   : ["medfan","sanglant","vampires aussi"],
-    "source" : "open",
-    "engine" : null,
-    "humans" : ["Hubert Roqueçort <hub@kiroxx.org>"]
-  }
+	{
+		"name"   : "Test Jeu 2",
+		"id"     : "tj2",
+		"author" : "lud",
+		"url"    : "http://somewhere.fr",
+		"status" : "live",
+		"techs"  : ["PHP","HTML5","JS","CSS3"],
+		"tags"   : ["medfan","sanglant","vampires aussi"],
+		"source" : "open",
+		"engine" : null,
+		"humans" : ["Hubert Roqueçort <hub@kiroxx.org>"],
+		"banners":	{ "728x90" : "http://serv.com/tj2.jpg"
+		          	, "120x240" : "http://serv.com/tj22.jpg"
+		          	}
+	}

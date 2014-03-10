@@ -1,12 +1,15 @@
-  {
-    "name"   : "Test Jeu 3",
-    "id"     : "tj3",
-    "author" : "niahoo",
-    "url"    : "http://ailleurs.fr",
-    "status" : "dev",
-    "techs"  : ["PHP","HTML5","JS","CSS3"],
-    "tags"   : ["medfan","sanglant","toujours des vampires"],
-    "source" : "open",
-    "engine" : null,
-    "humans" : ["@janépa"]
-  }
+	{
+		"name"   : "Test Jeu 3",
+		"id"     : "tj3",
+		"author" : "niahoo",
+		"url"    : "http://ailleurs.fr",
+		"status" : "dev",
+		"techs"  : ["PHP","HTML5","JS","CSS3"],
+		"tags"   : ["medfan","sanglant","toujours des vampires"],
+		"source" : "open",
+		"engine" : null,
+		"humans" : ["@janépa"],
+		"banners":	{ "728x90" : "http://serv.com/tj3.jpg"
+		          	, "120x240" : "http://serv.com/tj32.jpg"
+		          	}
+	}

@@ -10,7 +10,10 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-    jwc_sup:start_link().
+	jwc_web:http_setup(),
+	jwc_sup:start_link().
 
 stop(_State) ->
-    ok.
+	ok.
+
+

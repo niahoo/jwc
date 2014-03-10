@@ -5,5 +5,5 @@
               {applications,[kernel,stdlib]},
               {mod,{jwc_app,[]}},
               {env,[]},
-              {modules,[jwc,jwc_app,jwc_dat,jwc_ring,jwc_sup,jwring,
-                        jwring_app,jwring_sup]}]}.
+              {modules,[jwc,jwc_app,jwc_dat,jwc_ring,jwc_ring_dat,jwc_sup,
+                        jwc_web,jwring,jwring_app,jwring_sup]}]}.
