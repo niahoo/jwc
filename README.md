@@ -6,16 +6,15 @@ Les fiches JSON de chaque jeu se trouvent dans le répertoire `priv\games`.
 
 Pour soumettre son jeu le plus simple est de proposer une *pull-request*.
 
-L'identifiant ne doit pas déjà être pris par un autre jeu, et la fichier JSON doit être nommé `identifiant.json`.
+L'identifiant ne doit pas déjà être pris par un autre jeu.
 
-`status peut être "dev", "alpha", "beta", "open" ou "inactive" pour
-`les jeux abandonnés.
+`status` peut être `dev`, `alpha`, `beta`, `open` ou `inactive` pour les jeux abandonnés.
 
-`source` peut être `open` ou `close`. Cela concerne le code source serveur du jeu. Si le jeu est basé sur un moteur opensource type mamafia (C), `engine` doit contenir l'URL vers ce moteur et `source` doit logiquement être `"open"`.
+`source` peut être `open` ou `close`. Cela concerne le code source serveur du jeu. Si le jeu est basé sur un moteur opensource type mamafia (C), `engine` doit contenir l'URL vers ce moteur et `source` doit logiquement être `open`.
 
 `author` doit correspondre à un compte Jeuweb.
 
-`humans` doit contenir une liste de contacts à qui l'on peut s'adresser pour avoir plus d'informations sur un jeu. Le format conseillé est `"Nom Prénom <adresse@email.net>"` mail il est également possible de spécifier un compte Twitter ou une URL Facebook par exemple.
+`humans` doit contenir une liste de contacts à qui l'on peut s'adresser pour avoir plus d'informations sur un jeu. Le format conseillé est `Nom Prénom <adresse@email.net>` mail il est également possible de spécifier un compte Twitter ou une URL Facebook par exemple.
 
 ```json
   {
