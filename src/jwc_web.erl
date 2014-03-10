@@ -42,7 +42,8 @@ out(Arg, 'GET', ["banner","next",LSize]) ->
 		App = jwc_ring:next(),
 		[{status,ok},{url,lkup(Size,lkup(<<"banners">>,App))}]
 	catch
-		_:R -> [{status,error},{message,R}]
+		_:{badmatch,false} ->
+			[{status,error},{message,<<"Bad banner size">>}]
 	end,
 	JSON = jsx:encode(Infos),
 	[{content,"application/json",JSON}|force_reload_headers()];
